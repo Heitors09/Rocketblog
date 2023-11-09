@@ -1,0 +1,135 @@
+:root {
+    --purple-bg: #290742;
+    --dark-bg: #170027;
+    --button-bg: #9e6dc2;
+    --white: #fff;
+    --light-purple: #fbf6ff;
+    --green: #4fff4b;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.first{
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple-bg);
+    border-bottom: 6px solid var(--green);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 68px;
+    flex-wrap: wrap;
+}
+
+
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+header ul li:nth-child(1){
+    border-left: 2px solid var(--green);
+    padding-left: 3px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+#input{
+    display: flex;
+}
+
+.busca{
+    width: 230px;
+    height: 44px;
+    background: rgb(0, 0, 0, 0.4);
+    padding-left: 25.65px;
+    border: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.lupa{
+    width: 70px;
+    height: 44px;
+    background: url(./images/search.svg) no-repeat center var(--button-bg);
+    border: none;
+}
+
+main{
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin:64px auto;
+    max-width: 1200px;
+    grid-gap:30px
+}
+
+main > nav{
+    padding-left: 47px;
+}
+
+main >nav > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--button-bg);
+}
+
+main > nav > p {
+    padding-top:20px;
+    padding-right: 120px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+main > img{
+    grid-column: 2/3;
+    padding-right: 49px;
+    max-width: 100%;
+}
+
+main >nav > h4{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--button-bg);
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+
+
+@media(max-width:900px){
+     main{
+        display: flex;
+        flex-wrap: wrap;
+     }
+
+     main img{
+        margin: auto;
+     }
+    header{
+        gap:20px
+    } 
+} 
+@media(max-width:747px){
+    main img{
+        padding-left: 47px;
+    }
+}
